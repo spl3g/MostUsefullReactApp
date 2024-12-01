@@ -4,6 +4,8 @@ import { presetGpnDefault, Theme } from "@consta/uikit/Theme";
 import { Responses404 } from "@consta/uikit/Responses404";
 import MainPage from "../../pages/main-page/MainPage";
 import DefaultLayout from "../../layouts/default/DefaultLayout";
+import ServicePage from "../../pages/service-page/ServicePage";
+import ServiceDetailPage from "../../pages/service-detail-page/ServiceDetailPage";
 
 function App() {
     return (
@@ -12,7 +14,14 @@ function App() {
                 <Routes>
                     <Route path="/" element={<DefaultLayout />}>
                         <Route index element={<MainPage />}></Route>
-                        <Route path="services" element={<MainPage />}></Route>
+                        <Route
+                            path="services"
+                            element={<ServicePage />}
+                        ></Route>
+                        <Route
+                            path="services/:id"
+                            element={<ServiceDetailPage />}
+                        ></Route>
                         <Route path="login" element={<MainPage />}></Route>
                     </Route>
                     <Route path="*" element={<Responses404 />}></Route>
