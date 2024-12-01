@@ -15,10 +15,10 @@ const items: Item[] = [
 const PageTabs = ({ linePosition }: { linePosition: "top" | "bottom" }) => {
     const location = useLocation();
     const [value, setValue] = useState<Item | null>(
-        items.find((i) => i.link == location.pathname) || items[0],
+        items.find((i) => i.link === location.pathname) || items[0],
     );
     useEffect(() => {
-        setValue(items.find((i) => i.link == location.pathname) || items[0]);
+        setValue(items.find((i) => i.link === location.pathname) || items[0]);
     }, [location.pathname]);
     const navigate = useNavigate();
     return (
