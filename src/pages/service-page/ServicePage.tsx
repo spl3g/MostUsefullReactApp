@@ -27,6 +27,7 @@ const ServicePage = function () {
             {services ? (
                 services.map((services) => (
                     <ServicesListData
+                        id={services.id}
                         key={services.name}
                         name={services.name}
                         description={services.description}
