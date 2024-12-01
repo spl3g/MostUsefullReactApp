@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+
+.page-tabs {
+    flex-grow: 1;
+}
+
+.nav-links {
+    margin-left: 10px;
+}
+
+.nav-link {
+    margin-left: 15px;
+}
+
+.nav-link:first-child {
+    margin-left: 0;
+}
