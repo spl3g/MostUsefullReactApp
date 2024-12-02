@@ -4,12 +4,20 @@ import Header from "../../components/header/Header";
 
 const DefaultLayout = () => {
     return (
-        <div>
+        <div
+            style={{
+                display: "flex",
+                minHeight: "100vh",
+                flexDirection: "column",
+            }}
+        >
             <Header />
             <main>
                 <Outlet />
             </main>
-            <Footer />
+            <div style={{ marginTop: "auto" }}>
+                <Footer />
+            </div>
         </div>
     );
 };
