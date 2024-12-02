@@ -2,15 +2,26 @@ import { NewsListData, type News } from "../../types/News";
 import { useEffect, useState } from "react";
 import { getNewsListAction } from "../../store/api-actions";
 import { Loader } from "@consta/uikit/Loader";
+import { useDispatch, useSelector } from "react-redux";
+import { setNews } from "../../store/news-slice";
+import { RootState } from "../../store/store";
+import { URLs } from "../../const";
 
 const MainPage = function () {
-    const [news, setNews] = useState<News[] | null>();
+    const selectNews = (state: RootState) => state.news.news;
+    const dispatch = useDispatch();
+    const news = useSelector(selectNews);
+
     useEffect(() => {
-        async function fetchNews() {
-            setNews(await getNewsListAction());
+        if (news.length === 0) {
+            fetch(URLs.news)
+                .then((response) => response.json())
+                .then((data) => {
+                    dispatch(setNews(data));
+                })
+                .catch((error) => console.error("Error fetching news:", error));
         }
-        fetchNews();
-    }, []);
+    }, [dispatch, news]);
 
     return (
         <>
