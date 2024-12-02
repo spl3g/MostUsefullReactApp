@@ -7,6 +7,7 @@ import DefaultLayout from "../../layouts/default/DefaultLayout";
 import ServicePage from "../../pages/service-page/ServicePage";
 import ServiceDetailPage from "../../pages/service-detail-page/ServiceDetailPage";
 import LoginPage from "../../pages/login-page/LoginPage";
+import ProfilePage from "../../pages/profile-page/ProfilePage";
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                             element={<ServiceDetailPage />}
                         ></Route>
                         <Route path="login" element={<LoginPage />}></Route>
+                        <Route path="user" element={<ProfilePage />}></Route>
                     </Route>
                     <Route path="*" element={<Responses404 />}></Route>
                 </Routes>
