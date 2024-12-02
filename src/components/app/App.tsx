@@ -6,6 +6,7 @@ import MainPage from "../../pages/main-page/MainPage";
 import DefaultLayout from "../../layouts/default/DefaultLayout";
 import ServicePage from "../../pages/service-page/ServicePage";
 import ServiceDetailPage from "../../pages/service-detail-page/ServiceDetailPage";
+import LoginPage from "../../pages/login-page/LoginPage";
 
 function App() {
     return (
@@ -22,7 +23,7 @@ function App() {
                             path="services/:id"
                             element={<ServiceDetailPage />}
                         ></Route>
-                        <Route path="login" element={<MainPage />}></Route>
+                        <Route path="login" element={<LoginPage />}></Route>
                     </Route>
                     <Route path="*" element={<Responses404 />}></Route>
                 </Routes>
