@@ -23,8 +23,10 @@ const Header = () => {
         authButton = (
             <div style={{ display: "flex", gap: "0.5rem" }}>
                 <User
+                    style={{ cursor: "pointer" }}
                     name={user.firstName + " " + user.lastName}
                     avatarUrl={user.image}
+                    onClick={() => navigate("/user")}
                 />
                 <Button
                     label="Выход"
