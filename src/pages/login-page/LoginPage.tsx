@@ -51,7 +51,6 @@ const LoginPage = () => {
         <div
             style={{
                 maxWidth: "50rem",
-                margin: "0 auto",
                 marginBottom: "1rem",
             }}
         >
