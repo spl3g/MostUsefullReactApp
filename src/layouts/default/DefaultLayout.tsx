@@ -12,7 +12,7 @@ const DefaultLayout = () => {
             }}
         >
             <Header />
-            <main>
+            <main style={{ margin: "0 auto" }}>
                 <Outlet />
             </main>
             <div style={{ marginTop: "auto" }}>
