@@ -19,7 +19,6 @@ export const NewsListData: React.FC<News> = function ({
             horizontalSpace="m"
             style={{
                 maxWidth: "50rem",
-                margin: "0 auto",
                 marginBottom: "1rem",
             }}
         >
