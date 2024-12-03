@@ -19,7 +19,7 @@ const MainPage = function () {
 
     return (
         <>
-            {news ? (
+            {news.length > 0 ? (
                 news.map((news) => (
                     <NewsListData
                         key={news.name}

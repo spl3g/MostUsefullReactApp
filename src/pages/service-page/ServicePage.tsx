@@ -30,7 +30,7 @@ const ServicePage = function () {
                 gap: "1rem",
             }}
         >
-            {services ? (
+            {services.length > 0 ? (
                 services.map((services) => (
                     <ServicesListData
                         id={services.id}
