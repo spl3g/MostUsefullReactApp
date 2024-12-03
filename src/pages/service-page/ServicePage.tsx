@@ -23,7 +23,6 @@ const ServicePage = function () {
         <div
             style={{
                 maxWidth: "60rem",
-                margin: "0 auto",
                 marginBottom: "1rem",
 
                 display: "grid",
